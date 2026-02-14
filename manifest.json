@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Ozon Deposit Autofill",
+  "version": "1.0",
+  "description": "Автоматически подставляет минимальную сумму при клике на поле ввода на странице пополнения Ozon",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://finance.ozon.ru/payment-deposit*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
